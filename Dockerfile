@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 # Install pnpm
 RUN npm install -g pnpm@latest
@@ -19,7 +19,7 @@ COPY . .
 RUN pnpm build
 
 # Production stage
-FROM node:20-alpine AS production
+FROM node:22-alpine AS production
 
 # Install pnpm
 RUN npm install -g pnpm@latest
@@ -45,4 +45,3 @@ EXPOSE 4173
 
 # Start the production server
 CMD ["pnpm", "serve", "--host", "0.0.0.0"]
-
