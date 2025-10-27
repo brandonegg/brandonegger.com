@@ -58,7 +58,7 @@ jobs:
         continue-on-error: false
 
   check:
-    name: TS Check
+    name: Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
