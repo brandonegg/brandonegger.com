@@ -186,11 +186,12 @@ export default function Home() {
           <div className="text-muted space-y-4">
             <p>
               I&apos;m a software engineer based in Iowa City with a passion for
-              building products that solve real problems. I graduated from the{" "}
-              <span className="text-foreground">University of Iowa</span> with a
-              B.S. in Computer Science & Engineering and a minor in Economics,
-              maintaining a 3.96 GPA on the Dean&apos;s and President&apos;s
-              List.
+              building products that solve real problems. I hold a{" "}
+              <span className="text-foreground">
+                Master of Science in Computer Engineering
+              </span>{" "}
+              from the University of Iowa, where I also completed my B.S. in
+              Computer Science & Engineering with a minor in Economics.
             </p>
             <p>
               My journey spans from neuroscience research labs to aerospace
