@@ -1,14 +1,5 @@
 @import "tailwindcss";
 
-/* ------------------------------------------------------------------ *
- * Design system — color scheme + tokens + dark mode
- * Source: brandonegger.com-design-reference / Single.dc.html
- *
- * The design ships an amber variant, but its runtime scheme appends a
- * blue `sch` over it, so the blue palette below is the active one.
- * Toggle themes by adding/removing `.dark` on <html>.
- * ------------------------------------------------------------------ */
-
 /* Class-based dark mode (Tailwind v4). */
 @custom-variant dark (&:where(.dark, .dark *));
 
