@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+build/
+
+# generated
+next-env.d.ts
+*.tsbuildinfo
+
+# misc
+package-lock.json
+public/
