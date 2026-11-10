@@ -13,6 +13,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 Commit messages **and** pull request titles MUST follow the [Conventional
 Commits](https://www.conventionalcommits.org/) standard (e.g. `feat:`, `fix:`,
 `feat(parser):`, `BREAKING CHANGE:`). Before authoring a commit or a PR title,
-read the full specification in [CONTRIBUTING.md](CONTRIBUTING.md) — it holds the
-canonical reference for this repo and is updated in place as the spec evolves, so
-you do not need to keep this file's rules in sync yourself.
+read the full specification in [CONTRIBUTING.md](CONTRIBUTING.md).
