@@ -31,6 +31,15 @@ jobs:
       - uses: ./.github/actions/node-setup
       - run: pnpm lint
 
+  # TypeScript: fail on any type error (generates Next.js route types first).
+  typecheck:
+    name: TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/node-setup
+      - run: pnpm typecheck
+
   # Next.js: fail if the production build does not succeed.
   build:
     name: Next.js build
