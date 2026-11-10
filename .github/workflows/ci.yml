@@ -18,7 +18,8 @@ jobs:
     name: Prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/setup
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/node-setup
       - run: pnpm format:check
 
   # ESLint: fail on any lint error.
@@ -26,7 +27,8 @@ jobs:
     name: ESLint
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/setup
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/node-setup
       - run: pnpm lint
 
   # Next.js: fail if the production build does not succeed.
@@ -34,5 +36,6 @@ jobs:
     name: Next.js build
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/setup
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/node-setup
       - run: pnpm build

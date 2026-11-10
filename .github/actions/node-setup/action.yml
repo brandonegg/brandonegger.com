@@ -1,9 +1,8 @@
-name: CI setup
-description: Checkout the repo and install dependencies with a cached pnpm + Node toolchain
+name: "Node + pnpm setup"
+description: Set up a cached Node + pnpm toolchain and install dependencies
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v4
     - uses: actions/setup-node@v4
       with:
