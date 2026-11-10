@@ -8,9 +8,9 @@ applies to **both** the commit that a PR squashes/merges into and the PR title
 itself.
 
 The full specification is reproduced below for reference. This is a snapshot of
-**Conventional Commits 1.0.0**. If the specification changes, update this
-file (not `AGENTS.md`) so the project's conventions stay in sync. The canonical,
-up-to-date source of truth is:
+**Conventional Commits 1.0.0**. If the specification changes, update this file
+so the project's conventions stay in sync. The canonical, up-to-date source of
+truth is:
 
 - Spec: <https://www.conventionalcommits.org/en/v1.0.0/#specification>
 - Repo: <https://github.com/conventional-commits/conventionalcommits.org>
