@@ -44,22 +44,22 @@ The commit message should be structured as follows:
 The commit contains the following structural elements, to communicate intent to
 the consumers of your library:
 
-1. **fix:** a commit of the *type* `fix` patches a bug in your codebase (this
+1. **fix:** a commit of the _type_ `fix` patches a bug in your codebase (this
    correlates with [`PATCH`](http://semver.org/#summary) in Semantic Versioning).
-2. **feat:** a commit of the *type* `feat` introduces a new feature to the
+2. **feat:** a commit of the _type_ `feat` introduces a new feature to the
    codebase (this correlates with [`MINOR`](http://semver.org/#summary) in
    Semantic Versioning).
 3. **BREAKING CHANGE:** a commit that has a footer `BREAKING CHANGE:`, or
    appends a `!` after the type/scope, introduces a breaking API change
    (correlating with [`MAJOR`](http://semver.org/#summary) in Semantic
-   Versioning). A BREAKING CHANGE can be part of commits of any *type*.
-4. *types* other than `fix:` and `feat:` are allowed, for example
+   Versioning). A BREAKING CHANGE can be part of commits of any _type_.
+4. _types_ other than `fix:` and `feat:` are allowed, for example
    [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)
    (based on the [Angular
    convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines))
    recommends `build:`, `chore:`, `ci:`, `docs:`, `style:`, `refactor:`, `perf:`,
    `test:`, and others.
-5. *footers* other than `BREAKING CHANGE: <description>` may be provided and
+5. _footers_ other than `BREAKING CHANGE: <description>` may be provided and
    follow a convention similar to [git trailer
    format](https://git-scm.com/docs/git-interpret-trailers).
 
@@ -145,8 +145,8 @@ interpreted as described in
    `fix(parser):`
 5. A description MUST immediately follow the colon and space after the
    type/scope prefix. The description is a short summary of the code changes,
-   e.g., *fix: array parsing issue when multiple spaces were contained in
-   string*.
+   e.g., _fix: array parsing issue when multiple spaces were contained in
+   string_.
 6. A longer commit body MAY be provided after the short description, providing
    additional contextual information about the code changes. The body MUST begin
    one blank line after the description.
@@ -166,14 +166,14 @@ interpreted as described in
 11. Breaking changes MUST be indicated in the type/scope prefix of a commit, or
     as an entry in the footer.
 12. If included as a footer, a breaking change MUST consist of the uppercase text
-    BREAKING CHANGE, followed by a colon, space, and description, e.g., *BREAKING
-    CHANGE: environment variables now take precedence over config files*.
+    BREAKING CHANGE, followed by a colon, space, and description, e.g., _BREAKING
+    CHANGE: environment variables now take precedence over config files_.
 13. If included in the type/scope prefix, breaking changes MUST be indicated by a
     `!` immediately before the `:`. If `!` is used, `BREAKING CHANGE:` MAY be
     omitted from the footer section, and the commit description SHALL be used to
     describe the breaking change.
 14. Types other than `feat` and `fix` MAY be used in your commit messages, e.g.,
-    *docs: update ref docs.*
+    _docs: update ref docs._
 15. The units of information that make up Conventional Commits MUST NOT be
     treated as case-sensitive by implementors, with the exception of BREAKING
     CHANGE which MUST be uppercase.
@@ -196,7 +196,7 @@ interpreted as described in
 ### How should I deal with commit messages in the initial development phase?
 
 We recommend that you proceed as if you've already released the product.
-Typically *somebody*, even if it's your fellow software developers, is using
+Typically _somebody_, even if it's your fellow software developers, is using
 your software. They'll want to know what's fixed, what breaks etc.
 
 ### Are the types in the commit title uppercase or lowercase?
@@ -215,6 +215,7 @@ It discourages moving fast in a disorganized way. It helps you be able to move
 fast long term across multiple projects with varied contributors.
 
 ### Might Conventional Commits lead developers to limit the type of commits they
+
 make because they'll be thinking in the types provided?
 
 Conventional Commits encourages us to make more of certain types of commits such
@@ -228,6 +229,7 @@ should be translated to `MINOR` releases. Commits with `BREAKING CHANGE` in the
 commits, regardless of type, should be translated to `MAJOR` releases.
 
 ### How should I version my extensions to the Conventional Commits
+
 Specification, e.g. `@jameswomack/conventional-commit-spec`?
 
 We recommend using SemVer to release your own extensions to this specification
@@ -236,13 +238,14 @@ We recommend using SemVer to release your own extensions to this specification
 ### What do I do if I accidentally use the wrong commit type?
 
 #### When you used a type that's of the spec but not the correct type, e.g. `fix`
+
 instead of `feat`
 
 Prior to merging or releasing the mistake, we recommend using `git rebase -i` to
 edit the commit history. After release, the cleanup will be different according to
 what tools and processes you use.
 
-#### When you used a type *not* of the spec, e.g. `feet` instead of `feat`
+#### When you used a type _not_ of the spec, e.g. `feet` instead of `feat`
 
 In a worst case scenario, it's not the end of the world if a commit lands that
 does not meet the Conventional Commits specification. It simply means that commit
@@ -262,8 +265,8 @@ Reverting code can be complicated: are you reverting multiple commits? if you
 revert a feature, should the next release instead be a patch?
 
 Conventional Commits does not make an explicit effort to define revert behavior.
-Instead we leave it to tooling authors to use the flexibility of *types* and
-*footers* to develop their logic for handling reverts.
+Instead we leave it to tooling authors to use the flexibility of _types_ and
+_footers_ to develop their logic for handling reverts.
 
 One recommendation is to use the `revert` type, and a footer that references the
 commit SHAs that are being reverted:
