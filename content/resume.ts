@@ -34,47 +34,60 @@ export const profile: Profile = {
 
 export const experience: ExperienceEntry[] = [
   {
+    org: "Source Allies",
+    href: "https://www.sourceallies.com/",
+    role: "Software Consultant",
+    years: "2026 – now",
+    summary:
+      "Supporting feature development on a high volume enterprise Java platform.",
+    stats: [],
+  },
+  {
     org: "SeatStock",
+    href: "https://www.seatstock.com/",
     role: "Chief Technology Officer",
-    years: "2023 – now",
-    summary: "Built the platform from scratch and lead technical development.",
+    years: "2023 – 2026",
+    summary:
+      "Co-Founded a platform for students to buy and sell tickets. Lead technical development, product design, and infrastructure scale out.",
     stats: [
-      { value: "5+", label: "campuses" },
-      { value: "1,200+", label: "tickets traded" },
-      { value: "1st", label: "GSEA Pitch" },
+      { value: "25+", label: "campuses" },
+      { value: "75K+", label: "tickets traded" },
+      { value: "100K+", label: "students" },
+      { value: "$2.5 mil", label: "pre-seed valuation" },
     ],
   },
   {
     org: "Collins Aerospace",
+    href: "https://www.rtx.com/collinsaerospace",
     role: "Software Engineer Intern",
     years: "2022 – 2023",
-    summary: "Software engineering internship on aerospace systems.",
-    stats: [
-      { value: "1 yr", label: "on the team" },
-      { value: "aero", label: "domain" },
-      { value: "[add]", label: "[metric]" },
-    ],
+    summary:
+      "Developed software solutions in the aerospace industry, working on systems requiring high reliability and performance.",
+    stats: [],
   },
   {
     org: "Kliemann Labs",
+    href: "https://kliemann.lab.uiowa.edu/",
     role: "Research Assistant",
     years: "2021 – 2023",
     summary: "Neuroscience research with Python, Pandas and Matplotlib.",
     stats: [
-      { value: "2 yrs", label: "in the lab" },
+      { value: "1 paper", label: "co-authored" },
       { value: "neuro", label: "domain" },
       { value: "[add]", label: "[metric]" },
     ],
   },
   {
     org: "PeachPay",
+    href: "https://peachpay.app/",
     role: "Software Developer",
     years: "2021 – 2022",
-    summary: "Worked on one-click checkout.",
+    summary:
+      "Wroked on the one-click checkout plugin for WordPress WooCommerce, improving e-commerce conversion rates.",
     stats: [
-      { value: "1 yr", label: "on the team" },
-      { value: "checkout", label: "focus" },
-      { value: "[add]", label: "[metric]" },
+      { value: "+10%", label: "GMV growth" },
+      { value: "1k+", label: "merchants" },
+      { value: "10k+", label: "daily transactions" },
     ],
   },
 ];
@@ -83,9 +96,14 @@ export const education: EducationEntry[] = [
   {
     school: "University of Iowa",
     degree: "M.S., Computer Engineering",
-    years: "[start] – [end]",
-    note: "[Focus area, thesis or advisor, and any honors.]",
-    tags: ["[course or area]", "[course or area]", "[course or area]"],
+    years: "2024 – 2025",
+    note: "Focus in Electrical and Computer Engineering.",
+    stats: [
+      {
+        value: "4.0",
+        label: "GPA",
+      },
+    ],
   },
 ];
 
