@@ -1,6 +1,7 @@
 import { AsciiName } from "@/components/ascii-name";
 import { EducationSection } from "@/components/education-section";
 import { ExperienceSection } from "@/components/experience-section";
+import { PublicationsSection } from "@/components/publications-section";
 import { SocialLinks } from "@/components/social-links";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <ExperienceSection />
       <EducationSection />
+      <PublicationsSection />
     </main>
   );
 }
