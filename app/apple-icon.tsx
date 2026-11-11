@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { logo } from "@/lib/site";
+import { logo } from "@/lib/site-constants";
 
 // iOS ignores SVG icons, so render a PNG home-screen icon from the same shapes.
 export const size = { width: 180, height: 180 };

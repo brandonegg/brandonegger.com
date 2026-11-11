@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Red_Hat_Text, Red_Hat_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { logo, site } from "@/lib/site";
+import { logo, site } from "@/lib/site-constants";
 
 const redHatText = Red_Hat_Text({
   variable: "--font-red-hat-text",
