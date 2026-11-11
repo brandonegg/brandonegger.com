@@ -1,5 +1,5 @@
 import type { ClassNameProps } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/ui";
 
 // "Brandon Egger" rendered in the figlet "Small Slant" style
 const ASCII_NAME = [
