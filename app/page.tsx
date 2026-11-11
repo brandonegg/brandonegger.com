@@ -1,4 +1,5 @@
 import { AsciiName } from "@/components/ascii-name";
+import { ExperienceSection } from "@/components/experience-section";
 
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
       <div className="flex flex-col gap-7 sm:gap-9">
         <AsciiName className="mb-4 sm:mb-6" />
       </div>
+      <ExperienceSection />
     </main>
   );
 }
