@@ -120,6 +120,18 @@
   --font-ascii: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
+/* ---- Animations ---- */
+@theme {
+  /* Terminal cursor blink (components/typed-intro.tsx) */
+  --animate-blink: blink 1.1s steps(1) infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
 @layer base {
   /* Design's focus style: 2px accent outline with 2px offset */
   :where(a, button, input, select, textarea, [tabindex]):focus-visible {
