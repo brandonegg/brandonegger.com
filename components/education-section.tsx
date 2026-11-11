@@ -1,4 +1,4 @@
-import { ResumeEntry, TagList } from "@/components/resume-entry";
+import { ResumeEntry, StatList } from "@/components/resume-entry";
 import { Section } from "@/components/section";
 import { education } from "@/content/resume";
 
@@ -13,7 +13,7 @@ export function EducationSection() {
             subtitle={entry.degree}
             years={entry.years}
             summary={entry.note}
-            details={<TagList tags={entry.tags} />}
+            details={<StatList stats={entry.stats} />}
           />
         ))}
       </ol>

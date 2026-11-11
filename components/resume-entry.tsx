@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Stat } from "@/content/types";
 import type { ClassNameProps } from "@/lib/react-types";
 import { cn } from "@/lib/tailwind-utils";
 
@@ -11,7 +12,7 @@ type ResumeEntryProps = ClassNameProps & {
   years: string;
   /** Short paragraph in the right column. */
   summary: string;
-  /** Rendered under the summary, e.g. a StatList or TagList. */
+  /** Rendered under the summary, e.g. a StatList. */
   details?: ReactNode;
 };
 
@@ -56,12 +57,13 @@ export function ResumeEntry({
   );
 }
 
-type DetailListProps = ClassNameProps & {
-  children: ReactNode;
+type StatListProps = ClassNameProps & {
+  stats: Stat[];
 };
 
-/** A wrapping row of small mono details under a ResumeEntry summary. */
-function DetailList({ children, className }: DetailListProps) {
+/** A wrapping row of highlighted values with labels, e.g. "5+ campuses". */
+export function StatList({ stats, className }: StatListProps) {
+  if (stats.length === 0) return null;
   return (
     <div
       className={cn(
@@ -69,42 +71,11 @@ function DetailList({ children, className }: DetailListProps) {
         className,
       )}
     >
-      {children}
-    </div>
-  );
-}
-
-type StatListProps = ClassNameProps & {
-  stats: { value: string; label: string }[];
-};
-
-/** Details as highlighted values with labels, e.g. "5+ campuses". */
-export function StatList({ stats, className }: StatListProps) {
-  return (
-    <DetailList className={className}>
       {stats.map(({ value, label }, i) => (
         <span key={i}>
           <b className="font-semibold text-accent">{value}</b> {label}
         </span>
       ))}
-    </DetailList>
-  );
-}
-
-type TagListProps = ClassNameProps & {
-  tags: string[];
-};
-
-/** Details as hashtags, e.g. "#robotics". */
-export function TagList({ tags, className }: TagListProps) {
-  return (
-    <DetailList className={className}>
-      {tags.map((tag, i) => (
-        <span key={i}>
-          <span className="text-accent">#</span>
-          {tag}
-        </span>
-      ))}
-    </DetailList>
+    </div>
   );
 }
