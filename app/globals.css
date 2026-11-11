@@ -107,16 +107,6 @@
 }
 
 @layer base {
-  body {
-    background-color: var(--background);
-    background-image:
-      radial-gradient(1100px 700px at 100% 0%, var(--glow), transparent 65%),
-      radial-gradient(900px 700px at 0% 100%, var(--glow-2), transparent 70%);
-    background-attachment: fixed;
-    color: var(--foreground);
-    font-family: var(--font-sans);
-  }
-
   /* Design's focus style: 2px accent outline with 2px offset */
   :where(a, button, input, select, textarea, [tabindex]):focus-visible {
     outline: 2px solid var(--accent);

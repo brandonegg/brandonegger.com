@@ -31,7 +31,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${redHatText.variable} ${redHatMono.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col bg-background bg-fixed bg-[radial-gradient(1100px_700px_at_100%_0%,var(--glow),transparent_65%),radial-gradient(900px_700px_at_0%_100%,var(--glow-2),transparent_70%)] font-sans text-foreground">
+        {children}
+      </body>
     </html>
   );
 }
