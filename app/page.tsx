@@ -1,4 +1,5 @@
 import { AsciiName } from "@/components/ascii-name";
+import { EducationSection } from "@/components/education-section";
 import { ExperienceSection } from "@/components/experience-section";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <AsciiName className="mb-4 sm:mb-6" />
       </div>
       <ExperienceSection />
+      <EducationSection />
     </main>
   );
 }
