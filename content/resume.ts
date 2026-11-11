@@ -21,7 +21,7 @@ export const profile: Profile = {
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/brandonegger",
+      href: "https://www.linkedin.com/in/brandon-egger",
       icon: "linkedin",
     },
     {
