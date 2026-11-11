@@ -97,7 +97,7 @@ export const education: EducationEntry[] = [
     school: "University of Iowa",
     degree: "M.S., Computer Engineering",
     years: "2024 – 2025",
-    note: "Focus in Electrical and Computer Engineering.",
+    note: "Focus in Electrical and Computer Engineering with a minor in Economics.",
     stats: [
       {
         value: "4.0",
@@ -109,15 +109,26 @@ export const education: EducationEntry[] = [
 
 export const publications: Publication[] = [
   {
-    year: "2023",
-    title: "[Paper title]",
-    authors: "[Co-author], B. Egger, [Co-author], [Lab PI]",
-    venue: "[Journal or conference], vol. [n]",
+    year: "2025",
+    title:
+      "Electronic School Medication Administration Record (ESMAR) application development",
+    authors: "B. Egger",
+    venue: "M.S. thesis, University of Iowa",
+    links: {
+      pdf: "https://iro.uiowa.edu/view/pdfCoverPage?instCode=01IOWA_INST&filePid=13974724960002771&download=true",
+      doi: "https://doi.org/10.25820/etd.007915",
+    },
   },
   {
-    year: "2022",
-    title: "[Paper title]",
-    authors: "B. Egger, [Co-author]",
-    venue: "[Journal or conference]",
+    year: "2024",
+    title:
+      "Resting-State Functional Connectivity of the Amygdala in Autism: A Preregistered Large-Scale Study",
+    authors:
+      "D. Kliemann, P. Galdi, A. L. Van De Water, B. Egger, D. Jarecka, R. Adolphs, S. S. Ghosh",
+    venue: "American Journal of Psychiatry, vol. 181, no. 12, pp. 1076–1085",
+    links: {
+      pdf: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11667795/pdf/nihms-2037725.pdf",
+      doi: "https://doi.org/10.1176/appi.ajp.20230249",
+    },
   },
 ];
