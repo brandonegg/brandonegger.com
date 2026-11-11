@@ -1,9 +1,7 @@
 import type { ClassNameProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-// "Brandon Egger" rendered in the figlet "Small Slant" style, from the
-// homepage design (Revision 2). Kept as an array of lines so the backticks
-// and backslashes in the art don't need template-literal escaping.
+// "Brandon Egger" rendered in the figlet "Small Slant" style
 const ASCII_NAME = [
   "   ___                   __",
   "  / _ )_______ ____  ___/ /__  ___",
