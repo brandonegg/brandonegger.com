@@ -1,3 +1,4 @@
+import type { ClassNameProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 // "Brandon Egger" rendered in the figlet "Small Slant" style, from the
@@ -15,9 +16,7 @@ const ASCII_NAME = [
   "    /___//___/",
 ].join("\n");
 
-type AsciiNameProps = {
-  className?: string;
-};
+type AsciiNameProps = ClassNameProps;
 
 export function AsciiName({ className }: AsciiNameProps) {
   return (
