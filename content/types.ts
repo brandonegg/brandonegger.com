@@ -14,7 +14,7 @@ export type Profile = {
   socials: SocialLink[];
 };
 
-export type ExperienceStat = {
+export type Stat = {
   /** Highlighted value, e.g. "5+". */
   value: string;
   /** Label after the value, e.g. "campuses". */
@@ -28,7 +28,7 @@ export type ExperienceEntry = {
   /** Free-form date range, e.g. "2023 – now". */
   years: string;
   summary: string;
-  stats: ExperienceStat[];
+  stats: Stat[];
 };
 
 export type EducationEntry = {
@@ -37,8 +37,7 @@ export type EducationEntry = {
   /** Free-form date range, e.g. "2019 – 2023". */
   years: string;
   note: string;
-  /** Rendered as "#tag". */
-  tags: string[];
+  stats: Stat[];
 };
 
 export type PublicationLinks = {
