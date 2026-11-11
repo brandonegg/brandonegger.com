@@ -14,3 +14,10 @@ Commit messages **and** pull request titles MUST follow the [Conventional
 Commits](https://www.conventionalcommits.org/) standard (e.g. `feat:`, `fix:`,
 `feat(parser):`, `BREAKING CHANGE:`). Before authoring a commit or a PR title,
 read the full specification in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Pull request descriptions
+
+Every pull request body MUST follow
+[`.github/pull_request_template.md`](.github/pull_request_template.md). GitHub
+only pre-fills the template in the web UI, so when opening a PR from the CLI
+(e.g. `gh pr create --body ...`), copy the template's sections and fill them in.
