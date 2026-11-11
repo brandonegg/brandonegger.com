@@ -40,21 +40,6 @@ export type EducationEntry = {
   tags: string[];
 };
 
-export type ProjectCover =
-  /** A path under public/, e.g. "/projects/seatstock.png". */
-  | { kind: "image"; src: string; alt: string }
-  /** Short text art drawn on the cover instead of an image. */
-  | { kind: "glyph"; text: string };
-
-export type Project = {
-  name: string;
-  /** Free-form date or range, e.g. "2022" or "2023 – now". */
-  years: string;
-  description: string;
-  stack: string[];
-  cover: ProjectCover;
-};
-
 export type PublicationLinks = {
   pdf?: string;
   doi?: string;

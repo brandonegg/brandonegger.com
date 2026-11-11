@@ -8,7 +8,6 @@ import type {
   EducationEntry,
   ExperienceEntry,
   Profile,
-  Project,
   Publication,
 } from "./types";
 
@@ -87,44 +86,6 @@ export const education: EducationEntry[] = [
     years: "[start] – [end]",
     note: "[Focus area, thesis or advisor, and any honors.]",
     tags: ["[course or area]", "[course or area]", "[course or area]"],
-  },
-];
-
-export const projects: Project[] = [
-  {
-    name: "SeatStock",
-    years: "2023 – now",
-    description:
-      "A student ticket exchange for buying and selling event tickets, live on 5+ campuses.",
-    stack: ["TypeScript", "React", "Node.js", "PostgreSQL"],
-    cover: {
-      kind: "image",
-      src: "/projects/seatstock.png",
-      alt: "SeatStock cover",
-    },
-  },
-  {
-    name: "Iowa ATR",
-    years: "2022",
-    description:
-      "An auditory training platform built for the University of Iowa.",
-    stack: ["TypeScript", "React", "Web Audio API"],
-    cover: { kind: "glyph", text: "▁▃▆█▆▃▁▂▅▇▅▂▁" },
-  },
-  {
-    name: "Spotify Recs",
-    years: "2021",
-    description:
-      "Song recommendations based on cosine similarity between tracks.",
-    stack: ["TypeScript", "Spotify API"],
-    cover: { kind: "glyph", text: "cos(θ) = 0.94" },
-  },
-  {
-    name: "tempProbe",
-    years: "2020",
-    description: "A wireless ESP32 temperature monitor that sends SMS alerts.",
-    stack: ["C++", "ESP32", "Flutter", "Twilio"],
-    cover: { kind: "glyph", text: "23.4°C ▲" },
   },
 ];
 
