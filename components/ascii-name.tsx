@@ -1,5 +1,5 @@
 import type { ClassNameProps } from "@/lib/types";
-import { cn } from "@/lib/ui";
+import { cn } from "@/lib/tailwind-utils";
 
 // "Brandon Egger" rendered in the figlet "Small Slant" style
 const ASCII_NAME = [
