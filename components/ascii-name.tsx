@@ -1,4 +1,4 @@
-import type { ClassNameProps } from "@/lib/types";
+import type { ClassNameProps } from "@/lib/react-types";
 import { cn } from "@/lib/tailwind-utils";
 
 // "Brandon Egger" rendered in the figlet "Small Slant" style
