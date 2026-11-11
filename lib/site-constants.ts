@@ -1,6 +1,6 @@
 export const site = {
   name: "Brandon Egger",
-  url: "https://brandonegger.com",
+  url: "https://www.brandonegger.com",
   description: "Brandon Egger's personal website.",
   locale: "en_US",
 } as const;

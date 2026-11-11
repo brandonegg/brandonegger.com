@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { logo, site } from "@/lib/site";
+import { logo, site } from "@/lib/site-constants";
 
 export const alt = site.name;
 export const size = { width: 1200, height: 630 };
@@ -30,7 +30,7 @@ export default function OpenGraphImage() {
           {site.name}
         </div>
         <div style={{ fontSize: 40, color: accent }}>
-          {site.url.replace("https://", "")}
+          {site.url.replace("https://www.", "")}
         </div>
       </div>
     </div>,
