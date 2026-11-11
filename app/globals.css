@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
-/* Class-based dark mode (Tailwind v4). */
-@custom-variant dark (&:where(.dark, .dark *));
+/* Dark mode follows the system preference by default. A `.dark` or `.light`
+ * class on <html> forces a theme (e.g. for a future manual toggle). Both the
+ * `dark:` utilities and the dark token block below use this one variant. */
+@custom-variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not(.light), :root:not(.light) *) {
+      @slot;
+    }
+  }
+}
 
 /* ---- Light theme (the design's :root defaults) ---- */
 :root {
@@ -38,40 +49,43 @@
   --ring: 0 0 0 3px rgba(29, 95, 174, 0.16);
 }
 
-/* ---- Dark theme ---- */
-.dark {
-  color-scheme: dark;
+/* ---- Dark theme ----
+ * Applied via the `dark` variant: system dark mode, or `.dark` on <html>. */
+:root {
+  @variant dark {
+    color-scheme: dark;
 
-  --bg: #121519;
-  --surface: #191e25;
-  --line: #28303b;
+    --bg: #121519;
+    --surface: #191e25;
+    --line: #28303b;
 
-  --ink: #e7e5df;
-  --ink-2: #b9b8b2;
-  --ink-muted: #8e9297;
+    --ink: #e7e5df;
+    --ink-2: #b9b8b2;
+    --ink-muted: #8e9297;
 
-  --accent: #7cb4ff;
-  --accent-soft: #16263b;
-  --on-accent: #07121f;
+    --accent: #7cb4ff;
+    --accent-soft: #16263b;
+    --on-accent: #07121f;
 
-  --glow: rgba(124, 180, 255, 0.11);
-  --glow-2: rgba(124, 180, 255, 0.06);
-  --glass: rgba(25, 30, 37, 0.66);
-  --highlight: rgba(255, 255, 255, 0.055);
-  --scrim: rgba(4, 8, 14, 0.45);
-  --shadow-color: rgba(0, 0, 0, 0.65);
+    --glow: rgba(124, 180, 255, 0.11);
+    --glow-2: rgba(124, 180, 255, 0.06);
+    --glass: rgba(25, 30, 37, 0.66);
+    --highlight: rgba(255, 255, 255, 0.055);
+    --scrim: rgba(4, 8, 14, 0.45);
+    --shadow-color: rgba(0, 0, 0, 0.65);
 
-  --shadow-1:
-    0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 20px -10px rgba(0, 0, 0, 0.55);
-  --shadow-2:
-    0 2px 6px rgba(0, 0, 0, 0.35), 0 26px 52px -20px rgba(0, 0, 0, 0.75);
-  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.4);
-  --ring: 0 0 0 3px rgba(124, 180, 255, 0.25);
+    --shadow-1:
+      0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 20px -10px rgba(0, 0, 0, 0.55);
+    --shadow-2:
+      0 2px 6px rgba(0, 0, 0, 0.35), 0 26px 52px -20px rgba(0, 0, 0, 0.75);
+    --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+    --ring: 0 0 0 3px rgba(124, 180, 255, 0.25);
+  }
 }
 
 /* ---- Map design tokens onto Tailwind's theme so utilities work ----
  * Colors/effects use `inline` so the generated utilities read the live
- * token (and therefore react to .dark). Font families are set by
+ * token (and therefore react to the dark variant). Font families are set by
  * next/font in app/layout.tsx. Radius is theme-independent. */
 @theme inline {
   /* Palette */
