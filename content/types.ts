@@ -24,6 +24,7 @@ export type ExperienceStat = {
 export type ExperienceEntry = {
   org: string;
   role: string;
+  href?: string;
   /** Free-form date range, e.g. "2023 – now". */
   years: string;
   summary: string;
