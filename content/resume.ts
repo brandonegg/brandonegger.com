@@ -71,11 +71,7 @@ export const experience: ExperienceEntry[] = [
     role: "Research Assistant",
     years: "2021 – 2023",
     summary: "Neuroscience research with Python, Pandas and Matplotlib.",
-    stats: [
-      { value: "1 paper", label: "co-authored" },
-      { value: "neuro", label: "domain" },
-      { value: "[add]", label: "[metric]" },
-    ],
+    stats: [{ value: "1 paper", label: "co-authored" }],
   },
   {
     org: "PeachPay",
