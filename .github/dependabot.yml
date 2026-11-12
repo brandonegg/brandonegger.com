@@ -1,0 +1,53 @@
+# Dependabot version updates.
+# Docs: https://docs.github.com/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+updates:
+  # pnpm packages (Dependabot uses the "npm" ecosystem for pnpm and detects
+  # pnpm-lock.yaml automatically).
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    # Keep commit messages / PR titles Conventional Commits compliant
+    # (see CONTRIBUTING.md), e.g. "chore(deps): bump next from 16.4.5 to 16.5.0".
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope
+    groups:
+      # Next.js and its ESLint config must move together.
+      nextjs:
+        patterns:
+          - next
+          - eslint-config-next
+      # React runtime and its types.
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+      # Batch remaining minor/patch bumps into a single PR; majors stay separate.
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+
+  # GitHub Actions used by CI workflows and the local composite action.
+  - package-ecosystem: github-actions
+    directories:
+      - / # .github/workflows
+      - /.github/actions/* # composite actions (e.g. node-setup)
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: ci
+      include: scope
+    groups:
+      # Batch all action bumps into a single PR.
+      github-actions:
+        patterns:
+          - "*"
