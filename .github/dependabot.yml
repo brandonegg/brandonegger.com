@@ -1,9 +1,5 @@
-# Dependabot version updates.
-# Docs: https://docs.github.com/code-security/dependabot/working-with-dependabot/dependabot-options-reference
 version: 2
 updates:
-  # pnpm packages (Dependabot uses the "npm" ecosystem for pnpm and detects
-  # pnpm-lock.yaml automatically).
   - package-ecosystem: npm
     directory: /
     schedule:
@@ -35,7 +31,6 @@ updates:
           - minor
           - patch
 
-  # GitHub Actions used by CI workflows and the local composite action.
   - package-ecosystem: github-actions
     directories:
       - / # .github/workflows
